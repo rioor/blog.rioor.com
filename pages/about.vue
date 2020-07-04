@@ -1,5 +1,5 @@
 <template>
   <div>
-    <div>about</div>
+    <div>rioor blog</div>
   </div>
 </template>

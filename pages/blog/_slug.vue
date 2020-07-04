@@ -1,9 +1,37 @@
 <template>
-  <article>
-    <h1>{{article.title}}</h1>
-    <nuxt-content :document="article"></nuxt-content>
-    <pre>{{article}}</pre>
-  </article>
+  <div>
+    <div class="underline mb-4 text-blue-600 hover:text-blue-700">
+      <nuxt-link to="/blog">← Back to Blog</nuxt-link>
+    </div>
+    <article>
+      <h2 class="text-3xl text-gray-700 leading-none">{{article.title}}</h2>
+
+      <ul class="list-none text-sm text-gray-600 my-2">
+        <li class="inline-block mr-2">slug: {{article.slug}}</li>
+        <li class="inline-block mr-2">create: {{article.createdAt}}</li>
+        <li class="inline-block mr-2">update: {{article.updatedAt}}</li>
+      </ul>
+
+      <div class="text-gray-700 my-4">{{article.description}}</div>
+
+      <div class="my-4 p-2" align="center">
+        <img
+          :src="article.image"
+          :alt="article.title"
+          class="w-full md:w-1/2 object-cover border-white border-4 shadow-md hover:shadow-lg"
+        />
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-4 md:col-span-3">
+          <blog-article :article="article"></blog-article>
+        </div>
+        <div class="col-span-4 md:col-span-1">
+          <blog-toc :tocs="article.toc"></blog-toc>
+        </div>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script>
