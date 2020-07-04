@@ -1,7 +1,7 @@
 ---
 title: Introduction 1
 description: Learn how to use @nuxt/content.
-img: first-blog-post.jpg
+image: /img/18.png
 alt: my first blog post
 ---
 
