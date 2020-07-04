@@ -2,9 +2,8 @@
   "name": "blog.rioor.com",
   "version": "1.0.0",
   "description": "Extremely Simple Blog",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/rioor/blog.rioor.com/issues"
   },
-  "homepage": "https://github.com/rioor/blog.rioor.com#readme"
+  "homepage": "https://github.com/rioor/blog.rioor.com#readme",
+  "dependencies": {
+    "@nuxt/content": "^1.4.1",
+    "nuxt": "^2.13.3"
+  }
 }
