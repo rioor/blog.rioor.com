@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Extremely Simple Blog",
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "generate": "nuxt generate"
   },
   "repository": {
     "type": "git",

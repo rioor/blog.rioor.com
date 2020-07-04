@@ -1,9 +1,9 @@
 <template>
   <div class="flex items-center justify-between py-4">
-    <a href="/" class="hover:text-blue-600 hover:underline">
+    <nuxt-link to="/" class="hover:text-blue-600 hover:underline">
       <span>BLOG</span>
       <span class="text-xs">rioor.com</span>
-    </a>
+    </nuxt-link>
 
     <ul class="inline-flex items-center">
       <li
