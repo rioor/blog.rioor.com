@@ -3,8 +3,9 @@
     <div class="underline mb-4 text-blue-600 hover:text-blue-700">
       <nuxt-link to="/blog">← Back to Blog</nuxt-link>
     </div>
+
     <article>
-      <h2 class="text-3xl text-gray-700 leading-none">{{article.title}}</h2>
+      <h2 class="text-xl md:text-3xl text-gray-700 leading-none">{{article.title}}</h2>
 
       <ul class="list-none text-sm text-gray-600 my-2">
         <li class="inline-block mr-2">slug: {{article.slug}}</li>
@@ -21,13 +22,15 @@
           class="w-full md:w-1/2 object-cover border-white border-4 shadow-md hover:shadow-lg"
         />
       </div>
-
-      <div class="grid grid-cols-4 gap-4">
-        <div class="col-span-4 md:col-span-3">
-          <blog-article :article="article"></blog-article>
-        </div>
-        <div class="col-span-4 md:col-span-1">
+      <!-- grid -->
+      <div class="grid grid-cols-4 gap-4 relative">
+        <!-- toc -->
+        <div class="col-span-4">
           <blog-toc :tocs="article.toc"></blog-toc>
+        </div>
+        <!-- article -->
+        <div class="col-span-4">
+          <blog-article :article="article"></blog-article>
         </div>
       </div>
     </article>

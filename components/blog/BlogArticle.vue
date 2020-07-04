@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-content :document="article"></nuxt-content>
+    <nuxt-content :document="article" class="break-words"></nuxt-content>
   </div>
 </template>
 
