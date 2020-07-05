@@ -2,19 +2,21 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
     runs-on: centos-7.6
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: install
-      run: yarn
-
-    - name: generate
-      run: yarn generate
+      - name: Deploy
+　　  uses: JamesIves/github-pages-deploy-action@releases/v3
+　　  with:
+　　　  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+　　　  BRANCH: gh-pages
+　　　  FOLDER: dist
+　　　  BUILD_SCRIPT: npm install && npm run generate
