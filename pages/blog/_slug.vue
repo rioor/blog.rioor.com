@@ -9,8 +9,8 @@
 
       <ul class="list-none text-sm text-gray-600 my-2">
         <li class="inline-block mr-2">slug: {{article.slug}}</li>
-        <li class="inline-block mr-2">create: {{article.createdAt}}</li>
-        <li class="inline-block mr-2">update: {{article.updatedAt}}</li>
+        <li class="inline-block mr-2">created: {{ formatDate(article.createdAt) }}</li>
+        <li class="inline-block mr-2">updated: {{ formatDate(article.updatedAt) }}</li>
       </ul>
 
       <div class="text-gray-700 my-4">{{article.description}}</div>
@@ -43,6 +43,12 @@ export default {
     const article = await $content('articles', params.slug).fetch()
 
     return { article }
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    }
   }
 }
 </script>

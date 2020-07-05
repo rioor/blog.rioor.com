@@ -19,7 +19,7 @@
         >{{article.title}}</nuxt-link>
       </h2>
       <div class="text-sm text-gray-500 mt-2 truncate">
-        <span>{{article.updatedAt}}</span>
+        <span>updated: {{ formatDate(article.updatedAt) }}</span>
         <span class="ml-2">{{article.slug}}</span>
       </div>
       <div class="my-1 text-sm text-gray-500 truncate">{{article.description}}</div>
@@ -33,6 +33,12 @@ export default {
     article: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-10">
     <nuxt-content :document="article" class="break-words"></nuxt-content>
   </div>
 </template>
