@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/rioor/blog.rioor.com/issues"
   },
-  "homepage": "https://github.com/rioor/blog.rioor.com#readme",
+  "homepage": "https://github.com/rioor/blog.rioor.com",
   "dependencies": {
     "@nuxt/content": "^1.4.1",
     "nuxt": "^2.13.3"
