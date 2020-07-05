@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="underline mb-4 text-blue-600 hover:text-blue-700">
-      <nuxt-link to="/blog">← Back to Blog</nuxt-link>
+      <nuxt-link to="/blog">← Back to Blog List</nuxt-link>
     </div>
 
     <article>

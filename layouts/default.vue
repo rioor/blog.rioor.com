@@ -8,8 +8,8 @@
       <nuxt></nuxt>
     </div>
 
-    <footer class="container mx-auto px-4 max-w-screen-lg">
-      <foot-bar></foot-bar>
+    <footer class="bg-gray-700">
+      <foot-bar class="container mx-auto px-4 max-w-screen-lg"></foot-bar>
     </footer>
   </div>
 </template>
