@@ -1,8 +1,8 @@
 ---
 title: css
 date: 2019-10-20 17:57:07
-description: "css、scss、less使用技巧"
-image: "/images/20191021/w3c.png"
+description: 'css、scss、less使用技巧'
+image: '/images/20191021/w3c.png'
 slug: css
 ---
 
@@ -58,7 +58,7 @@ css3 为了更好的区分开伪类及伪元素，伪元素使用双冒号
 
 ```css
 .element::before {
-  content: "Note: "; /* 字符串 */
+  content: 'Note: '; /* 字符串 */
 }
 ```
 
